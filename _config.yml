@@ -1,10 +1,10 @@
 ## You should change each of the following fields
 ## to customize your blog
 
-title: Calculating Basic Descriptive Statistics in Python
-description: This is a basic tutorial for effectively using Python to calculate summary statistics from data. 
+title: Evandrewer's STAT 386 Blog
+description: This is my blog for my Data Science Processes class! 
 author: Everett Andrew
-author_description: I'm a student studying Statistics at BYU. This is my first blog post!
+author_description: I'm a senior working towards a Bachelor's in Applied Statistics at BYU.
 
 url: https://evandrewer.github.io ## change this to https://yourusername.github.io
 baseurl: /my-blog  ## change this to the name of your blog repository
