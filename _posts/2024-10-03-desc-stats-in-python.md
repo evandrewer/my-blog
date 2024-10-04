@@ -63,6 +63,70 @@ Another helpful library commonly used in data analysis is Pandas. If you're work
     #=> returns 2.5
 {%- endhighlight -%}
 
-In all three of our examples, the mean is calculated as:
+This simple measure gives a good sense of the "central" value of your data; however it can be sensitive to outliers in the dataset. Other descriptive statistics, such as the median and mode, can complement the mean and reveal a fuller picture of the story behind the data distribution.
 
-    $$\textrm{Mean} = \frac{x_1 + x_2 + ... + x_{n-1}+x_n}{n} $$
+# The Median
+
+The median is another helpful statistic. It is the middle value of a dataset when the values are sorted. It helps us identify where the center-most values are in the data, and it is especially useful when your data has outliers or significant skew, as it's less sensitive to extreme values. In the case that your dataset has an even number of data points, the median can be calculated as the average of the two middle values. The median is quite a bit trickier to calculate in base Python than the median. Here's one (probably not optimized) way to do so:
+
+{%- highlight python -%}
+    # Sample data
+    data = [10, 2, 30000, 400, 5000]
+    n = len(data)
+
+    # Sort the data:
+    data.sort()
+
+    # Check if even amount of data points
+    if n % 2 == 0:
+        middle_1 = int(n/2) - 1
+        middle_2 = int(n/2)
+        median = (data[middle_1] + data[middle_2]) / 2
+        print(median)
+
+    # If odd
+    else:
+        middle = int((n-1)/2)
+        median = data[middle]
+        print(median)
+
+    #=> returns 400
+{%- endhighlight -%}
+
+### Using NumPy
+
+Thankfully, our helpful Python libraries once again come to the rescue with a much simpler solution. Here's how to do so in NumPy:
+
+{%- highlight python -%}
+    import numpy as np
+
+    # Sample data
+    data = [18, 11, 13, 12, 14, 19]
+
+    # Calculate median
+    median = np.median(data)
+    print(median)
+
+    #=> returns 13.5
+{%- endhighlight -%}
+
+### Using Pandas
+
+The Pandas library also has a very straightforward solution to find the median within a DataFrame:
+
+{%- highlight python -%}
+    import pandas as pd
+
+    # Sample data
+    df = pd.DataFrame({'values': [5, 10, 15, 20, 25]})
+
+    # Calculate median
+    median = df['values'].median()
+    print(median)
+
+    #=> returns 15
+{%- endhighlight -%}
+
+We can see from our first example that the data must be sorted first before selecting the middle value, otherwise it will be incorrect. Both the NumPy and Pandas functions do this automatically. Additionally we can see in the second example that since the amount of data is even, the average of the two middle values is returned! As explained earlier, the median is a better representation of central tendency in skewed datasets, as well as when outliers are present. While the mean is pulled towards extreme values, the median remains unaffected by them, which allows us to better understand the characteristics of our data!
+
+ 
