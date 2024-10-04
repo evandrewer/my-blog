@@ -29,9 +29,9 @@ The mean is perhaps the most commonly used descriptive statistic for data. It gi
     #=> returns 4.25
 {%- endhighlight -%}
 
-## Using NumPy
+### Using NumPy
 
-The NumPy library simplifeis this even further, providing a built-in method to calculate the mean automatically. Here's how to do it:
+The NumPy library simplifies this even further, providing a built-in method to calculate the mean automatically. Here's how to do it:
 
 {%- highlight python -%}
     import numpy as np
@@ -46,4 +46,23 @@ The NumPy library simplifeis this even further, providing a built-in method to c
     #=> returns 6.0
 {%- endhighlight -%}
 
+### Using Pandas
 
+Another helpful library commonly used in data analysis is Pandas. If you're working with data in a Pandas DataFrame, calculating the mean is just as simple as with NumPy. It also has a method you can call:
+
+{%- highlight python -%}
+    import pandas as pd
+
+    # Sample data
+    df = pd.DataFrame({'values': [1, 2, 3, 4]})
+
+    # Calculate mean
+    mean = df['values'].mean()
+    print(mean)
+
+    #=> returns 2.5
+{%- endhighlight -%}
+
+In all three of our examples, the mean is calculated as:
+
+    $$\textrm{Mean} = \frac{x_1 + x_2 + ... + x_{n-1}+x_n}{n} $$
