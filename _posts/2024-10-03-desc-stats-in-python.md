@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Calculating Basic Descriptive Statistics in Python"
+date: 10-3-2024
+description: This is a tutorial for how to calculate and use basic statistics to summarize your data.
+image: /assets/img/blog-image.jpg
+---
+
+<p class="intro"><span class="dropcap">D</span>escriptive statistics are a crucial tool for summarizing and understanding data. Whether you're analyzing sales, results from surveys, or data from personal projects, understanding basic metrics like the mean, median, and standard deviation can provide much needed insight.
+
+
+In this post, I'll introduce you to the necessary functions and packages needed to calculate these statistics using Python. With the assistance of often-used libraries like NumPy and Pandas, you'll know how to summarize and interpret your data with just a few lines of code. Once you've finished reading, you'll be ready to make sense of your datasets and perform fundamental data analysis tasks with confidence!
