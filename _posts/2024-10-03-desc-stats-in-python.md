@@ -199,5 +199,6 @@ These 3 descriptive statistics are vitally important for understanding any set a
 
 For a more full understanding of the ins and outs of the NumPy and Pandas libraries, check out the following links for their documentation:
 
-https://numpy.org/doc/
-https://pandas.pydata.org/doc/
+(https://numpy.org/doc/)
+
+(https://pandas.pydata.org/doc/)
