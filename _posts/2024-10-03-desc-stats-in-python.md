@@ -196,3 +196,8 @@ In the last example, we used the data [5, 10, 15, 20, 25]. The sample standard d
 ### In conclusion
 
 These 3 descriptive statistics are vitally important for understanding any set and distribution of data. They form a foundation upon which many more advanced statistical methods build. It's important to remember exactly what they represent in order to fully understand the meaning behind your data and distributions!
+
+For a more full understanding of the ins and outs of the NumPy and Pandas libraries, check out the following links for their documentation:
+
+https://numpy.org/doc/
+https://pandas.pydata.org/doc/
