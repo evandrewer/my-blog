@@ -14,7 +14,7 @@ image: /assets/img/pokeball_cover.jpg
 
 The reason I wanted to analyze Pokemon data is because I wanted to know: How do their heights, weights, and types differ depending on what region they are from?
 
-### How did you get all this data?
+### Ok, but how did you get all this data?
 
 All the data I have gathered comes from the Pokemon API site [PokeAPI](https://https://pokeapi.co/). This site is free to use and no API key is required! Still, in order to ensure my burden on the site was light, I limited my dataset to the first 5 regions of Pokemon, and only gathered data on a handful of different aspects about them (name, height, weight, type, and region).
 
@@ -30,7 +30,7 @@ def getPokemonData(endpoint):
     return r.json()
 ```
 
-This function returns the .json() file with the data ready to be extracted. I then created another code block to define the boundaries of each Pokemon's region by their IDs:
+This function returns a .json() file with the data we've requested ready to be extracted. I then created another code block to define the boundaries of each Pokemon's region by their IDs:
 
 ```
 pokemon_ids = range(1, 650)
@@ -49,3 +49,47 @@ def getRegion(pokemon_id):
             return region
     return None
 ```
+
+After that, I put these functions into action! Using a for loop, I ran through each pokemon ID from the first 5 regions, extracting their name, height, weight, and type(s), and correctly attributing regions. After each loop, I appended all the gathered data to my list, `data`.
+
+```
+data = []
+for pokemon_id in pokemon_ids:
+    pokemon_data = getPokemonData(str(pokemon_id))
+
+    if pokemon_data:
+        name = pokemon_data['name'].capitalize()
+        height = pokemon_data['height'] / 10 # convert to meters
+        weight = pokemon_data['weight'] / 10 # convert to kilograms
+        types = [t['type']['name'] for t in pokemon_data['types']]
+        region = getRegion(pokemon_id)
+        
+        data.append({'pokemon': name, 'height': height, 'weight': weight, 'types': types, 'region': region})
+```
+
+Finally, I converted my list of lists into a proper DataFrame, set the index to correspond to each Pokemon's ID number, and exploded the DataFrame to account for Pokemon with 2 types.
+
+```
+df = pd.DataFrame(data)
+df.index = pd.RangeIndex(start=1, stop=len(df)+1, step=1)
+df_multitype = df.explode('types')
+```
+
+The final result is a Dataframe with 958 rows, containing the first 649 Pokemon!
+
+### Some interesting findings
+
+I made sure to use the unexploded dataframe for most of my analysis. Don't want any Pokemon having their non-type data accounted for twice.
+
+##### Heights
+
+I wanted to take a look at Pokemon's heights first. These are the mean, minimum, and maximum heights, grouped by region:
+
+|        | Mean     | Minimum | Maximum |
+| ------ | -------- | ------- | ------- |
+| Kanto  | 1.194702 | 0.2     | 8.8     |
+| Johto  | 1.163000 | 0.2     | 9.2     |
+| Hoenn  | 1.229630 | 0.2     | 14.5    |
+| Sinnoh | 1.133645 | 0.2     | 5.4     |
+| Unova  | 1.032051 | 0.1     | 3.3     |
+
