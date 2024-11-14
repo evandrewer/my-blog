@@ -14,7 +14,7 @@ image: /assets/img/pokeball_cover.jpg
 
 The reason I wanted to analyze Pokemon data is because I wanted to know: How do their heights, weights, and types differ depending on what region they are from?
 
-### Ok, but how I get this data?
+### Ok, but how did I get this data?
 
 All the data I have gathered comes from the Pokemon API site [PokeAPI](https://https://pokeapi.co/). This site is free to use and no API key is required! Still, in order to ensure my burden on the site was light, I limited my dataset to the first 5 regions of Pokemon, and only gathered data on a handful of different aspects about them (name, height, weight, type, and region).
 
