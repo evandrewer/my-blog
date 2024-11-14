@@ -135,3 +135,31 @@ Due to the outliers potentially skewing the data, I removed them. Here's the new
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/graph2.png" alt="" style="width:700px;"/>
 
 The respective correlation coefficient for this one is 0.7244982, which indicates a strong positive correlation between Pokemon height and weight!
+
+#### Types
+
+Lastly, I wanted to know which types are most common for each region. Here are the top 3 most common types by region:
+
+| region | type    | count |
+| ------ | ------- | ----- |
+| Kanto  | poison  | 33    |
+|        | water   | 32    |
+| 	     | normal  | 22    |
+| Johto  | flying  | 19    |
+|        | water   | 18    |
+|        | normal  | 15    |
+| Hoenn  | water   | 28    |
+| 	     | psychic | 20    |
+|        | normal  | 18    |
+| Sinnoh | normal  | 17    |
+|        | flying  | 14    |
+|        | grass   | 14    |
+| Unova  | grass   | 20    |
+|        | bug     | 18    |
+|        | flying  | 18    |
+
+### To conclude
+
+I found a lot of interesting things out about the first 5 regions from the Pokemon games. For example, I never knew that there were so many Poison-type pokemon in the first region, Kanto. That always seemed like a less common type, and it's not even in the top 3 of any other region! I also found it surprising that none of the top 5 Pokemon by heights were in the top 5 by weight. You'd think that with a strong positive correlation between the two, there'd be at least one in both camps.
+
+If you're interested in any of the code I used for analysis, that can also be found in my github [here](https://github.com/evandrewer/pokemon-blogpost-code). Thanks for reading!
