@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Pokemon Obesity Epidemic"
+title:  "Are Pokemon Obese?"
 date: 13-11-2024
 description: Analyzing heights, weights, and more across the different regions of the Pokemon world.
 image: /assets/img/pokeball_cover.jpg
@@ -14,7 +14,7 @@ image: /assets/img/pokeball_cover.jpg
 
 The reason I wanted to analyze Pokemon data is because I wanted to know: How do their heights, weights, and types differ depending on what region they are from?
 
-### Ok, but how did you get all this data?
+### Ok, but how I get this data?
 
 All the data I have gathered comes from the Pokemon API site [PokeAPI](https://https://pokeapi.co/). This site is free to use and no API key is required! Still, in order to ensure my burden on the site was light, I limited my dataset to the first 5 regions of Pokemon, and only gathered data on a handful of different aspects about them (name, height, weight, type, and region).
 
@@ -134,7 +134,7 @@ Due to the outliers potentially skewing the data, I removed them. Here's the new
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/graph2.png" alt="" style="width:700px;"/>
 
-The respective correlation coefficient for this one is 0.7244982, which indicates a strong positive correlation between Pokemon height and weight!
+The respective correlation coefficient for this one is 0.7244982, which indicates a strong positive correlation between Pokemon height and weight! Additionally, calculating the average BMI (kg/m^2) of Pokemon across these 5 regions gives us a whopping BMI of 43.62276! Seeing as the threshold for obesity is any BMI greater than 30, it looks like Pokemon may need to cut the junk food and start excercising regularly.
 
 #### Types
 
