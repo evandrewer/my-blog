@@ -10,7 +10,7 @@ image: /assets/img/pokeball_cover.jpg
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/magikarp.png" alt="" style="width:700px;"/>
 
-### The Burning Question
+## The Burning Question
 
 The reason I wanted to analyze Pokemon data is because I wanted to know: How do their heights, weights, and types differ depending on what region they are from?
 
@@ -81,9 +81,9 @@ The final result is a Dataframe with 958 rows, containing the first 649 Pokemon!
 
 I made sure to use the unexploded dataframe for most of my analysis. Don't want any Pokemon having their non-type data accounted for twice.
 
-##### Heights
+#### Heights
 
-I wanted to take a look at Pokemon's heights first. These are the mean, minimum, and maximum heights, grouped by region:
+I wanted to take a look at Pokemon's heights (meters) first. These are the mean, minimum, and maximum heights, grouped by region:
 
 |        | Mean     | Minimum | Maximum |
 | ------ | -------- | ------- | ------- |
@@ -93,3 +93,45 @@ I wanted to take a look at Pokemon's heights first. These are the mean, minimum,
 | Sinnoh | 1.133645 | 0.2     | 5.4     |
 | Unova  | 1.032051 | 0.1     | 3.3     |
 
+#### Weights
+
+And here are the weights (kg):
+
+|        | Mean      | Minimum | Maximum |
+| ------ | --------- | ------- | ------- |
+| Kanto  | 45.951656 | 0.1     | 460.0   |
+| Johto  | 49.105000 | 0.5     | 400.0   |
+| Hoenn  | 67.077778 | 0.8     | 950.0   |
+| Sinnoh | 76.885047 | 0.3     | 750.0   |
+| Unova  | 52.402564 | 0.3     | 345.0   |
+
+#### Correlation
+
+I was interested in how closely correlated weight and height are, so I graphed a quick scatterplot:
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/graph1.png" alt="" style="width:700px;"/>
+
+The correlation coefficient is 0.63752 There appear to be a few outliers which are negatively affecting the correlation though. Here are the top 5 Pokemon for height and weight, respectively:
+
+| pokemon  | height	| weight | types	        | region |
+| -------- | ------ | ------ | ---------------- | ------ |
+| Wailord  | 14.5	| 398.0	 | [water]	        | Hoenn  |
+| Steelix  | 9.2	| 400.0	 | [steel, ground]  | Johto  |
+| Onix	   | 8.8	| 210.0	 | [rock, ground]   | Kanto  |
+| Rayquaza | 7.0	| 206.5	 | [dragon, flying] | Hoenn  |
+| Gyarados | 6.5	| 235.0	 | [water, flying]	| Kanto  |
+
+
+| pokemon          | height	| weight | types	        | region |
+| ---------------- | ------ | ------ | ---------------- | ------ |
+| Groudon          | 3.5	| 950.0	 | [ground]         | Hoenn  |
+| Giratina-altered | 4.5	| 750.0	 | [ghost, dragon]  | Sinnoh |
+| Dialga    	   | 5.4	| 683.0  | [steel, dragon]  | Sinnoh |
+| Metagross        | 1.6	| 550.0	 | [steel, psychic] | Hoenn  |
+| Snorlax          | 2.1	| 460.0	 | [normal]     	| Kanto  |
+
+Due to the outliers potentially skewing the data, I removed them. Here's the new graph:
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/graph2.png" alt="" style="width:700px;"/>
+
+The respective correlation coefficient for this one is 0.7244982, which indicates a strong positive correlation between Pokemon height and weight!
