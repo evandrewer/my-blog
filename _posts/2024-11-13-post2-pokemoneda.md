@@ -111,7 +111,7 @@ I was interested in how closely correlated weight and height are, so I graphed a
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/graph1.png" alt="" style="width:700px;"/>
 
-The correlation coefficient is 0.63752 There appear to be a few outliers which are negatively affecting the correlation though. Here are the top 5 Pokemon for height and weight, respectively:
+The correlation coefficient is 0.63752. There appear to be a few outliers which are negatively affecting the correlation though. Here are the top 5 Pokemon for height and weight, respectively:
 
 | pokemon  | height	| weight | types	        | region |
 | -------- | ------ | ------ | ---------------- | ------ |
