@@ -8,7 +8,7 @@ image: /assets/img/pokeball_cover.jpg
 
 <p class="intro"><span class="dropcap">T</span>he world of Pokemon is vast, teeming with cute cartoon creatures of all shapes and sizes and from all sorts of places. When choosing Pokemon for your adventure, sometimes it can be difficult to know where to start. This post will serve as a guide to help you find which regions have the Pokemon that most fit your basic preferences!</p>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/img/magikarp.png" alt="" style="width:700px;"/>
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/magikarp.png" alt="" style="width:500px;"/>
 
 ## The Burning Question
 
@@ -109,7 +109,7 @@ And here are the weights (kg):
 
 I was interested in how closely correlated weight and height are, so I graphed a quick scatterplot:
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/img/graph1.png" alt="" style="width:700px;"/>
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/graph1.png" alt="" style="width:500px;"/>
 
 The correlation coefficient is 0.63752. There appear to be a few outliers which are negatively affecting the correlation though. Here are the top 5 Pokemon for height and weight, respectively:
 
@@ -132,7 +132,7 @@ The correlation coefficient is 0.63752. There appear to be a few outliers which 
 
 Due to the outliers potentially skewing the data, I removed them. Here's the new graph:
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/img/graph2.png" alt="" style="width:700px;"/>
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/graph2.png" alt="" style="width:500px;"/>
 
 The respective correlation coefficient for this one is 0.7244982, which indicates a strong positive correlation between Pokemon height and weight! Additionally, calculating the average BMI (kg/m^2) of Pokemon across these 5 regions gives us a whopping BMI of 43.62276! Seeing as the threshold for obesity is any BMI greater than 30, it looks like Pokemon may need to cut the junk food and start excercising regularly.
 
