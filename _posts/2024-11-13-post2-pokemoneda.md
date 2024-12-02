@@ -162,4 +162,4 @@ Lastly, I wanted to know which types are most common for each region. Here are t
 
 I found a lot of interesting things out about the first 5 regions from the Pokemon games. For example, I never knew that there were so many Poison-type pokemon in the first region, Kanto. That always seemed like a less common type, and it's not even in the top 3 of any other region! I also found it surprising that none of the top 5 Pokemon by heights were in the top 5 by weight. You'd think that with a strong positive correlation between the two, there'd be at least one in both camps.
 
-If you're interested in any of the code I used for analysis, that can also be found in my github [here](https://github.com/evandrewer/pokemon-blogpost-code). Thanks for reading!
+I'd strongly recommend heading to the [PokeAPI](https://https://pokeapi.co/) site and try requesting some data for yourself! It's quite simple to use and very well documented, making it a very good API for beginners. If you're interested in any of the code I used for analysis, that can also be found in my github [here](https://github.com/evandrewer/pokemon-blogpost-code). Thanks for reading!
